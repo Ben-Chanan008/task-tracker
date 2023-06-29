@@ -1,5 +1,6 @@
 const form = document.querySelector('#add-task');
 const button = document.querySelector('.btn');
+const msg = document.querySelector('.msg');
 const tasks = document.querySelector('.tasks');
 const taskField = document.querySelector('#task');
 const dayField = document.querySelector('#day');
@@ -35,6 +36,11 @@ async function getTasks () {
 	const result = await res.json();
 	console.log(result);
 
+	if(result.message.length){
+		msg.innerText = `${result.message}`;
+	}else{
+		msg.innerText = ''
+	}
 	result.task_data.forEach(task => {
 		const div = document.createElement('div');
 		div.classList.add('task', task.reminder === 1 ? 'reminder' : null);
