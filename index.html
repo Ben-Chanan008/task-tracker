@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task Tracker</title>
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" integrity="sha512-t4GWSVZO1eC8BM339Xd7Uphw5s17a86tIZIj8qRxhnKub6WoyhnrxeCIMeAqBPgdZGlCcG2PrZjMc+Wr78+5Xg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="./fontawesome/css/all.css">
+	<style>
+		body{
+			font-family: 'Poppins', sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1>Task Tracker</h1>
+			<button class="btn">Add</button>
+		</div>
+		<div class="form">
+			<form id="add-task" class="d-none">
+				<div class="form-control">
+					<label for="task">Add Task</label>
+					<input type="text" id="task" name="task" placeholder="Add Task" />
+				</div>
+				<div class="form-control">
+					<label for="task">Add Date and Time</label>
+					<input type="text" id="day" name="day" placeholder="Add Date and Time" />
+				</div>
+				<div class="form-control-check">
+					<label for="check">Set Reminder</label>
+					<input type="checkbox" id="check" name="check" />
+				</div>
+				<button class="submit">Add Task</button>
+			</form>
+		</div>
+		<div class="tasks">
+		</div>
+	</div>
+	<script src="./index.js"></script>
+</body>
+</html>
